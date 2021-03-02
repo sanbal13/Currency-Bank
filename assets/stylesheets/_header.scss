@@ -1,0 +1,102 @@
+/* *********** Header ********** */
+/* ****** Brand ******/
+header {
+    background-color: $primary-background;
+    position: fixed;
+    width: 100%;
+    box-shadow: 1px 1px 5px grey;
+    z-index: 5;
+}
+.container-header {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+.logo {
+    color: $secondary-color;
+}
+.logo-text {
+    align-self: flex-start;
+}
+.coins {
+    font-size: 5rem;
+    margin-right: 1rem;
+}
+.bank-name {   
+    font-size: 3rem;
+}
+.tag-line {
+    line-height: 0.1;   
+    text-align: left; 
+    margin-left: .5rem;
+}
+/********* Navigation **********/
+.navigation li {    
+    margin-left: 4rem;
+    a {
+        color: $primary-color;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+}
+.fa-bars, .fa-times-circle {
+    color: $primary-color;
+    font-size: 2rem;
+}
+
+#toggle, .fa-bars, .close {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    .bank-name {
+        font-size: 2rem;
+    }  
+    .logo {
+        align-self: flex-start;
+    }
+    .nav-header {
+        display: none;
+    }
+    .fa-bars {
+        display: inline-block;
+    }
+    header .container-header {
+        flex-direction: row;
+    }
+    #toggle:checked ~.nav-header {
+        display: inline-block;
+        position: fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+    }
+    #toggle:checked ~.bars {
+        display: none;
+    }
+    #toggle:checked ~.close {
+        display: inline-block;
+    }   
+    .navigation {
+        flex-direction: column;
+        height: 100vh;
+        background-color: rgba($primary-background, 0.9);
+        justify-content: space-evenly;
+        position: absolute;
+        width: 100%;
+        li a {
+            font-size: 3rem;
+        }
+    }
+    .nav-bar {
+        position: relative;
+    }
+    .logo, .close {
+        z-index: 5;
+    }
+}

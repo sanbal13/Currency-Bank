@@ -1,0 +1,283 @@
+/********************* Home Page ********************/
+/*********** Grid *********/
+.container-grid {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "to-do to-do to-do to-do"
+                         "serve-farmer serve-businessman serve-salaried serve-students"
+                         "numbers numbers numbers numbers"
+                         "service-accounts service-loans service-cards  service-insurance";
+    color: $primary-color;               
+    text-shadow: 1px 1px 1px $primary-background;      
+}
+.to-do, .serve-farmer, .serve-businessman, .serve-salaried, .serve-students, .service-accounts, .service-loans, .service-cards, .service-insurance {
+    padding: 3rem;
+}
+.to-do {
+    grid-area: to-do;
+    background: rgba($secondary-background,0.3);
+}
+.serve-farmer {
+    grid-area: serve-farmer;
+    background: rgba($secondary-background,0.5);
+}
+.serve-businessman {
+    grid-area: serve-businessman;
+    background: rgba($secondary-background,0.6);
+}
+.serve-salaried {
+    grid-area: serve-salaried;
+    background: rgba($secondary-background,0.5);
+}
+.serve-students {
+    grid-area: serve-students;
+    background: rgba($secondary-background,0.6);
+}
+.numbers {
+    grid-area: numbers;
+}
+.service-accounts {
+    grid-area: service-accounts;
+    background: rgba($secondary-background,0.6);
+}    
+.service-loans {
+    grid-area: service-loans;
+    background: rgba($secondary-background,0.5);
+}
+.service-cards {
+    grid-area: service-cards;
+    background: rgba($secondary-background,0.6);
+}
+.service-insurance {
+    grid-area: service-insurance;
+    background: rgba($secondary-background,0.5);
+}
+
+/********** Hero **********/
+.hero{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 2.16fr 1fr;
+    height: 100vh;
+}
+
+.farming {
+    background: url("../media/farming.jpg");
+    &:hover .schemes {
+        display:inline-block;
+        animation: slide-left 5s linear 0s 1 normal;
+    }
+}
+
+.businessman {
+    background: url("../media/bussinessman.jpg"); 
+    background-position: right bottom;
+    left: 0%;
+    &:hover .schemes {
+        display:inline-block;
+        animation: slide-right 5s linear 0s 1 normal;
+    }
+}
+
+.farming, .businessman {
+    overflow: hidden;
+    background-size: cover;
+    position: relative;
+}
+.schemes {    
+    display: none;
+    text-align: right;
+    position: absolute;
+    bottom: 10%;
+
+    .scheme-item {
+        background: rgba($primary-background, 0.8);
+        border: 5px solid black;
+        border-radius: 50px;
+        border-left: 0;
+        border-right: 0;
+        margin-top: 5rem;
+        display: inline-block;
+        &:hover a {
+            color: $primary-background;
+            background: rgba($primary-color, 0.5);
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 50px;
+        }
+    }
+    a {
+        font-size: 1.5rem;
+        padding: 1rem;
+        color: $primary-color;
+        display: inline-block;
+    }
+}
+.schemes-right {
+    text-align: left;
+    position: absolute;
+}
+.scheme-left {
+    position: absolute;
+    right: 0;
+}
+
+@keyframes slide-left {
+    0% {
+        left: 100%;
+    }
+    25% {
+        left: 75%;
+    }
+    50% {
+        left: 25%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        right: 100%;        
+    }
+    25% {
+        right: 75%;        
+    }
+    50% {
+        right: 25%;
+        left: 0;
+    }
+    100% {
+        right: 0%;
+        left: 0;
+    }
+}
+/******************** To do **********************/
+.action {
+    font-size: 1.5rem;
+    padding: 2rem;
+    border: 5px solid $primary-color;
+    margin-top: 1rem;
+    &:hover {
+        box-shadow: 1px 1px 10px 5px $primary-background;
+        padding: 1.3rem 2rem;
+    }
+    &:hover .action-btn{
+        display: inline-block;
+    }
+}
+/*********** We Serve ***********/
+.serve i {
+    font-size: 6rem;
+    margin: 2rem 0;
+}
+.serve-para, .service-para {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0.5rem 0;
+    color: $primary-color;
+    //text-shadow: 0px 0px 3px #000;
+}
+.serve-btn, .service-btn {
+    margin-top: 1rem;
+}
+/* ********* Numbers *********** */
+.numbers {
+    background-color: rgba(61, 56, 56, .6);
+    .flex {
+        width: 20%;
+    }
+}
+.numbers i {
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+.count {
+    font-size: 4rem;
+}
+
+/*********** We Provide  Service ***********/
+.service img {
+    height: 35%;
+    margin-bottom: 1rem;
+}
+
+/*********** Media Querries ************/
+@media screen and (max-width:1200px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .hero {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100vh 100vh;
+        height: 200vh;
+    }
+
+}
+@media screen and (max-width:970px) {
+
+    .container-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "to-do to-do"
+                         "serve-farmer serve-businessman" 
+                         "serve-students serve-salaried "
+                         "numbers numbers"
+                         "service-accounts service-loans" 
+                         "service-insurance service-cards";
+    }
+    .service img {
+        width: auto;
+        height: 12rem;
+    }
+    .container-header {
+       flex-direction: column;
+       text-align: center;
+       align-items: center;
+    }
+    .nav-header {
+        margin-top: 1rem;
+    }
+}
+@media screen and (max-width:768px) {
+    .container-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "to-do"
+                         "serve-farmer" 
+                         "serve-students"                                                   
+                         "serve-salaried "
+                         "serve-businessman" 
+                         "numbers"
+                         "service-accounts"
+                         "service-insurance"
+                         "service-cards"
+                         "service-loans";                          
+                         
+    }
+  
+    .sm-flex-column {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sm-padding { 
+        padding: 2rem 0;
+    }
+}
+ @media screen and (max-width:540px) {    
+    html {
+        font-size: 10px;
+    }
+    .to-do li {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .btn {
+            margin-top: 1rem;
+        }
+    } 
+   
+}

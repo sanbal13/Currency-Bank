@@ -1,0 +1,102 @@
+/********************* Custom Styles ***********************/
+html {
+    font-size: 16px;
+}
+body {
+    line-height: 1.5;
+    font-family: $font-family;
+    background-color: $primary-background;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+.padding {
+    padding: 3rem 0;
+}
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+}
+/* ********** Button ********** */
+.btn {
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    color: $primary-color;
+    background-color: rgba($primary-background, 0.4);
+    border-radius: 50px;
+    box-shadow: 1px 1px 2px #000;
+    font-weight: 700;
+    font-size: 1.1rem;
+    &:hover {
+        color: rgba($primary-background, 0.4);
+        background-color: $primary-color;
+        box-shadow: 1px 1px 2px $primary-background;
+    }
+}
+.action-btn {
+    display: none;
+}
+
+
+/*********** Flex ***********/
+.flex {
+    display: flex;
+}
+.inline-flex {
+    display: inline-flex;
+}
+.align-center {
+    align-items: center;
+}
+.space-between {
+    justify-content: space-between;
+}
+.space-around {
+    justify-content: space-around;
+}
+.flex-column {
+    flex-direction: column;
+}
+/************ Headings ***********/
+@while $heading <= 6 {
+    h#{$heading} {
+        font-size: 2.5 - ($heading *0.25rem);
+        font-weight: 700;
+        text-align: center;
+    }
+    $heading: $heading + 1;
+}
+.heading-section {
+    margin: 2rem 0;
+}
+.heading-footer {
+    text-align: left;
+}
+.heading-serve, .heading-service {
+    color:rgba($primary-background, 0.1);
+}
+.top {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    background-color: rgba($primary-background, 0.4);
+    text-align: center;
+    color: #fff;
+}
+.hero {
+    position: relative;
+    z-index:2;
+}
+

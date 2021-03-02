@@ -1,0 +1,96 @@
+/* ******************* Internet Banking ********************** */
+.keyboard {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  color: $primary-background;
+  background-color: $primary-color;
+  justify-content: center;
+  margin-top: 10rem;
+  padding: 2rem;
+  .btn {
+    padding: 0.2rem 1rem;
+    background-color: $primary-color;
+    color: $primary-background;
+    border-radius: 0rem;
+     &:hover {
+       color: $primary-background;
+       background-color: rgba($primary-background,0.8);
+       color: $primary-color;       
+       outline: 5px solid transparent;
+     }
+  }
+}
+#userid, #password {
+  padding: 0.5rem;
+  border: none;
+  margin-right: 2rem;
+  margin-left: 0.5rem;
+  border-radius: .2rem;
+  outline: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.heading-keyboard {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+.form-keyboard {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba($primary-background, 0.5);
+}
+
+/* ********** Key Grid ********** */
+.key-grid  {
+  margin-top: 2rem;
+  display: grid;
+  padding: 2rem;
+  background-color: rgba($primary-background, 0.5);
+  grid-template-columns: repeat(11, 1fr );
+  gap: 1rem;                     
+  place-items: center;
+  position: relative;
+}
+.key {
+  background-color: #d3cdcd;
+  width: 100%;
+  text-align: center;
+  border-radius: 0.1rem;
+  box-shadow: 1px 1px 1px black;
+}
+.cover {
+  background-color: rgba(grey, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+/* ********** Enable virtual keyboard ************ */
+#cb:checked ~.key-grid .cover {
+  background-color: transparent;
+  z-index: -1;
+}
+
+/************ Media Querries ************/
+@media screen and (max-width:970px) {
+  .form-keyboard {
+    flex-direction: column;
+    div {
+      margin-bottom: 1rem;
+    }
+    #userid {
+      margin-left: 1.4rem;
+      color:red;
+    }
+  }
+}
+@media screen and (max-width:768px) {
+ .key-grid {
+  grid-template-columns: repeat(8, 1fr );
+ }
+}
+@media screen and (max-width:540px) {    
+  .key-grid {
+    grid-template-columns: repeat(6, 1fr );
+   }
+}
+
+

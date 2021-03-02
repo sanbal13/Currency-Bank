@@ -1,0 +1,1020 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/********************* Custom Styles ***********************/
+html {
+  font-size: 16px;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "Lato", sans-serif;
+  background-color: #00203F;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.padding {
+  padding: 3rem 0;
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ********** Button ********** */
+.btn {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  color: #ADEFD1;
+  background-color: rgba(0, 32, 63, 0.4);
+  border-radius: 50px;
+  -webkit-box-shadow: 1px 1px 2px #000;
+          box-shadow: 1px 1px 2px #000;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.btn:hover {
+  color: rgba(0, 32, 63, 0.4);
+  background-color: #ADEFD1;
+  -webkit-box-shadow: 1px 1px 2px #00203F;
+          box-shadow: 1px 1px 2px #00203F;
+}
+
+.action-btn {
+  display: none;
+}
+
+/*********** Flex ***********/
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.inline-flex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.align-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.space-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/************ Headings ***********/
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.heading-section {
+  margin: 2rem 0;
+}
+
+.heading-footer {
+  text-align: left;
+}
+
+.heading-serve, .heading-service {
+  color: rgba(0, 32, 63, 0.1);
+}
+
+.top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 1rem;
+  background-color: rgba(0, 32, 63, 0.4);
+  text-align: center;
+  color: #fff;
+}
+
+.hero {
+  position: relative;
+  z-index: 2;
+}
+
+/* *********** Header ********** */
+/* ****** Brand ******/
+header {
+  background-color: #00203F;
+  position: fixed;
+  width: 100%;
+  -webkit-box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
+  z-index: 5;
+}
+
+.container-header {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  color: #bbb7b7;
+}
+
+.logo-text {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.coins {
+  font-size: 5rem;
+  margin-right: 1rem;
+}
+
+.bank-name {
+  font-size: 3rem;
+}
+
+.tag-line {
+  line-height: 0.1;
+  text-align: left;
+  margin-left: .5rem;
+}
+
+/********* Navigation **********/
+.navigation li {
+  margin-left: 4rem;
+}
+
+.navigation li a {
+  color: #ADEFD1;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.navigation li a:hover {
+  color: #bbb7b7;
+}
+
+.fa-bars, .fa-times-circle {
+  color: #ADEFD1;
+  font-size: 2rem;
+}
+
+#toggle, .fa-bars, .close {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .bank-name {
+    font-size: 2rem;
+  }
+  .logo {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .nav-header {
+    display: none;
+  }
+  .fa-bars {
+    display: inline-block;
+  }
+  header .container-header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #toggle:checked ~ .nav-header {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  #toggle:checked ~ .bars {
+    display: none;
+  }
+  #toggle:checked ~ .close {
+    display: inline-block;
+  }
+  .navigation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100vh;
+    background-color: rgba(0, 32, 63, 0.9);
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    position: absolute;
+    width: 100%;
+  }
+  .navigation li a {
+    font-size: 3rem;
+  }
+  .nav-bar {
+    position: relative;
+  }
+  .logo, .close {
+    z-index: 5;
+  }
+}
+
+/********************** Footer *********************/
+.grid-footer {
+  margin: 0 auto;
+  max-width: 1335px;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.5fr 1fr 1fr 1fr;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  padding: 2rem;
+}
+
+footer {
+  width: 100%;
+  position: relative;
+}
+
+footer, footer a {
+  color: #00203F;
+  background-color: #ADEFD1;
+}
+
+footer li {
+  line-height: 1.8;
+}
+
+footer li a {
+  font-weight: 500;
+}
+
+footer li a:hover {
+  text-shadow: 1px 1px 1px black;
+}
+
+footer .contact {
+  color: #555252;
+}
+
+.follow-footer, h1 {
+  text-align: left;
+}
+
+.follow-footer {
+  margin-top: 2rem;
+  text-transform: capitalize;
+}
+
+.footer-social a {
+  color: #555252;
+  margin-right: 2rem;
+  font-size: 2rem;
+}
+
+.footer-social a:hover {
+  color: #1DA1F2;
+}
+
+.footer-social a:link {
+  color: grey;
+}
+
+.footer-social a:focus {
+  color: brown;
+}
+
+.footer-social a:active {
+  color: green;
+}
+
+/* Copyright */
+.copyright {
+  display: inline-block;
+  width: 98%;
+  margin: 0 1%;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 32, 63, 0.2);
+  text-align: center;
+  color: rgba(0, 32, 63, 0.5);
+}
+
+/*********** Media Querries ***********/
+@media screen and (max-width: 768px) {
+  .grid-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .grid-footer .follow-footer {
+    text-align: center;
+  }
+  .grid-footer .footer-social {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 0 1rem;
+  }
+  .heading-footer {
+    text-align: center;
+    margin-top: 1rem;
+    text-decoration: underline;
+  }
+  .description {
+    text-align: center;
+  }
+  h1 {
+    text-align: center;
+  }
+}
+
+/********************* Home Page ********************/
+/*********** Grid *********/
+.container-grid {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: "to-do to-do to-do to-do" "serve-farmer serve-businessman serve-salaried serve-students" "numbers numbers numbers numbers" "service-accounts service-loans service-cards  service-insurance";
+  color: #ADEFD1;
+  text-shadow: 1px 1px 1px #00203F;
+}
+
+.to-do, .serve-farmer, .serve-businessman, .serve-salaried, .serve-students, .service-accounts, .service-loans, .service-cards, .service-insurance {
+  padding: 3rem;
+}
+
+.to-do {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: to-do;
+  background: rgba(173, 239, 209, 0.3);
+}
+
+.serve-farmer {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: serve-farmer;
+  background: rgba(173, 239, 209, 0.5);
+}
+
+.serve-businessman {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: serve-businessman;
+  background: rgba(173, 239, 209, 0.6);
+}
+
+.serve-salaried {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: serve-salaried;
+  background: rgba(173, 239, 209, 0.5);
+}
+
+.serve-students {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: serve-students;
+  background: rgba(173, 239, 209, 0.6);
+}
+
+.numbers {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: numbers;
+}
+
+.service-accounts {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: service-accounts;
+  background: rgba(173, 239, 209, 0.6);
+}
+
+.service-loans {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: service-loans;
+  background: rgba(173, 239, 209, 0.5);
+}
+
+.service-cards {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: service-cards;
+  background: rgba(173, 239, 209, 0.6);
+}
+
+.service-insurance {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: service-insurance;
+  background: rgba(173, 239, 209, 0.5);
+}
+
+/********** Hero **********/
+.hero {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-columns: 2.16fr 1fr;
+      grid-template-columns: 2.16fr 1fr;
+  height: 100vh;
+}
+
+.farming {
+  background: url("../media/farming.jpg");
+}
+
+.farming:hover .schemes {
+  display: inline-block;
+  -webkit-animation: slide-left 5s linear 0s 1 normal;
+          animation: slide-left 5s linear 0s 1 normal;
+}
+
+.businessman {
+  background: url("../media/bussinessman.jpg");
+  background-position: right bottom;
+  left: 0%;
+}
+
+.businessman:hover .schemes {
+  display: inline-block;
+  -webkit-animation: slide-right 5s linear 0s 1 normal;
+          animation: slide-right 5s linear 0s 1 normal;
+}
+
+.farming, .businessman {
+  overflow: hidden;
+  background-size: cover;
+  position: relative;
+}
+
+.schemes {
+  display: none;
+  text-align: right;
+  position: absolute;
+  bottom: 10%;
+}
+
+.schemes .scheme-item {
+  background: rgba(0, 32, 63, 0.8);
+  border: 5px solid black;
+  border-radius: 50px;
+  border-left: 0;
+  border-right: 0;
+  margin-top: 5rem;
+  display: inline-block;
+}
+
+.schemes .scheme-item:hover a {
+  color: #00203F;
+  background: rgba(173, 239, 209, 0.5);
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 50px;
+}
+
+.schemes a {
+  font-size: 1.5rem;
+  padding: 1rem;
+  color: #ADEFD1;
+  display: inline-block;
+}
+
+.schemes-right {
+  text-align: left;
+  position: absolute;
+}
+
+.scheme-left {
+  position: absolute;
+  right: 0;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    left: 100%;
+  }
+  25% {
+    left: 75%;
+  }
+  50% {
+    left: 25%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    left: 100%;
+  }
+  25% {
+    left: 75%;
+  }
+  50% {
+    left: 25%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    right: 100%;
+  }
+  25% {
+    right: 75%;
+  }
+  50% {
+    right: 25%;
+    left: 0;
+  }
+  100% {
+    right: 0%;
+    left: 0;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    right: 100%;
+  }
+  25% {
+    right: 75%;
+  }
+  50% {
+    right: 25%;
+    left: 0;
+  }
+  100% {
+    right: 0%;
+    left: 0;
+  }
+}
+
+/******************** To do **********************/
+.action {
+  font-size: 1.5rem;
+  padding: 2rem;
+  border: 5px solid #ADEFD1;
+  margin-top: 1rem;
+}
+
+.action:hover {
+  -webkit-box-shadow: 1px 1px 10px 5px #00203F;
+          box-shadow: 1px 1px 10px 5px #00203F;
+  padding: 1.3rem 2rem;
+}
+
+.action:hover .action-btn {
+  display: inline-block;
+}
+
+/*********** We Serve ***********/
+.serve i {
+  font-size: 6rem;
+  margin: 2rem 0;
+}
+
+.serve-para, .service-para {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0.5rem 0;
+  color: #ADEFD1;
+}
+
+.serve-btn, .service-btn {
+  margin-top: 1rem;
+}
+
+/* ********* Numbers *********** */
+.numbers {
+  background-color: rgba(61, 56, 56, 0.6);
+}
+
+.numbers .flex {
+  width: 20%;
+}
+
+.numbers i {
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+.count {
+  font-size: 4rem;
+}
+
+/*********** We Provide  Service ***********/
+.service img {
+  height: 35%;
+  margin-bottom: 1rem;
+}
+
+/*********** Media Querries ************/
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+  .hero {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 100vh 100vh;
+        grid-template-rows: 100vh 100vh;
+    height: 200vh;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .container-grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "to-do to-do" "serve-farmer serve-businessman"  "serve-students serve-salaried " "numbers numbers" "service-accounts service-loans"  "service-insurance service-cards";
+  }
+  .service img {
+    width: auto;
+    height: 12rem;
+  }
+  .container-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-header {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "to-do" "serve-farmer"  "serve-students"                                                    "serve-salaried " "serve-businessman"  "numbers" "service-accounts" "service-insurance" "service-cards" "service-loans";
+  }
+  .sm-flex-column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .sm-padding {
+    padding: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  html {
+    font-size: 10px;
+  }
+  .to-do li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .to-do li .btn {
+    margin-top: 1rem;
+  }
+}
+
+/* ******************* Internet Banking ********************** */
+.keyboard {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  color: #00203F;
+  background-color: #ADEFD1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10rem;
+  padding: 2rem;
+}
+
+.keyboard .btn {
+  padding: 0.2rem 1rem;
+  background-color: #ADEFD1;
+  color: #00203F;
+  border-radius: 0rem;
+}
+
+.keyboard .btn:hover {
+  color: #00203F;
+  background-color: rgba(0, 32, 63, 0.8);
+  color: #ADEFD1;
+  outline: 5px solid transparent;
+}
+
+#userid, #password {
+  padding: 0.5rem;
+  border: none;
+  margin-right: 2rem;
+  margin-left: 0.5rem;
+  border-radius: .2rem;
+  outline: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.heading-keyboard {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.form-keyboard {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(0, 32, 63, 0.5);
+}
+
+/* ********** Key Grid ********** */
+.key-grid {
+  margin-top: 2rem;
+  display: -ms-grid;
+  display: grid;
+  padding: 2rem;
+  background-color: rgba(0, 32, 63, 0.5);
+  -ms-grid-columns: (1fr)[11];
+      grid-template-columns: repeat(11, 1fr);
+  gap: 1rem;
+  place-items: center;
+  position: relative;
+}
+
+.key {
+  background-color: #d3cdcd;
+  width: 100%;
+  text-align: center;
+  border-radius: 0.1rem;
+  -webkit-box-shadow: 1px 1px 1px black;
+          box-shadow: 1px 1px 1px black;
+}
+
+.cover {
+  background-color: rgba(128, 128, 128, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/* ********** Enable virtual keyboard ************ */
+#cb:checked ~ .key-grid .cover {
+  background-color: transparent;
+  z-index: -1;
+}
+
+/************ Media Querries ************/
+@media screen and (max-width: 970px) {
+  .form-keyboard {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .form-keyboard div {
+    margin-bottom: 1rem;
+  }
+  .form-keyboard #userid {
+    margin-left: 1.4rem;
+    color: red;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .key-grid {
+    -ms-grid-columns: (1fr)[8];
+        grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .key-grid {
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/********** Welcome ***********/
+.welcome {
+  color: #ADEFD1;
+}
+
+.welcome-grid {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: 40vh 40vh;
+      grid-template-rows: 40vh 40vh;
+  place-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.accounts, .transfer, .cheques, .other-services {
+  position: relative;
+  border: 5px solid #ADEFD1;
+  -webkit-box-shadow: 1px 1px 5px #000;
+          box-shadow: 1px 1px 5px #000;
+  padding: 1rem;
+  width: 50%;
+  height: 50%;
+}
+
+.accounts:hover, .transfer:hover, .cheques:hover, .other-services:hover {
+  border-color: rgba(173, 239, 209, 0.5);
+  -webkit-box-shadow: 1px 1px 5px 2px #000;
+          box-shadow: 1px 1px 5px 2px #000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  background-color: #00203F;
+}
+
+.accounts:hover .close-window, .transfer:hover .close-window, .cheques:hover .close-window, .other-services:hover .close-window {
+  display: inline-block;
+}
+
+.close-window {
+  position: absolute;
+  display: inline-block;
+  top: 2rem;
+  right: 4rem;
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 0rem;
+  color: grey;
+  border: 2px solid grey;
+  line-height: 0.6;
+  vertical-align: top;
+  padding: 0 1rem;
+  padding-bottom: 0.5rem;
+  display: none;
+}
+
+.close-window:hover {
+  color: #fff;
+  border: 2px solid #fff;
+  -webkit-box-shadow: 1px 1px 1px #000;
+          box-shadow: 1px 1px 1px #000;
+}
+
+#close-cb {
+  display: none;
+}
+
+#close-cb:checked ~ div {
+  width: 50%;
+  height: 50%;
+  position: relative;
+}
+/*# sourceMappingURL=style.css.map */
