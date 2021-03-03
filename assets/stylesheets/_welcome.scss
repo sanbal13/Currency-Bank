@@ -1,6 +1,7 @@
 /********** Welcome ***********/
 .welcome  {
-    color: $primary-color
+    color: $primary-color;
+    padding: 10rem 0;
 }
 .welcome-grid {
     max-width: 1400px;
@@ -8,7 +9,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 40vh 40vh;
+    grid-template-rows: 30vh 30vh;
     place-items: center;
     gap: 1rem;
     margin-top: 2rem;

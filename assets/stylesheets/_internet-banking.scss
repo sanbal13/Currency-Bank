@@ -4,9 +4,13 @@
   border-top-right-radius: 0.5rem;
   color: $primary-background;
   background-color: $primary-color;
-  justify-content: center;
-  margin-top: 10rem;
+  border-top: 7px solid rgb(202, 200, 200);
+  border-bottom: 7px solid rgb(202, 200, 200);
+  border-left: 10px solid grey;
+  border-right: 10px solid grey;
+  justify-content: center;  
   padding: 2rem;
+  margin-bottom: 2rem;
   .btn {
     padding: 0.2rem 1rem;
     background-color: $primary-color;
@@ -14,11 +18,14 @@
     border-radius: 0rem;
      &:hover {
        color: $primary-background;
-       background-color: rgba($primary-background,0.8);
+       background-color: $primary-background;
        color: $primary-color;       
        outline: 5px solid transparent;
      }
   }
+}
+.padding-10 {
+  padding-top: 10rem;
 }
 #userid, #password {
   padding: 0.5rem;

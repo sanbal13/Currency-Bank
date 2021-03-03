@@ -940,11 +940,15 @@ footer .contact {
   border-top-right-radius: 0.5rem;
   color: #00203F;
   background-color: #ADEFD1;
+  border-top: 7px solid #cac8c8;
+  border-bottom: 7px solid #cac8c8;
+  border-left: 10px solid grey;
+  border-right: 10px solid grey;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 10rem;
   padding: 2rem;
+  margin-bottom: 2rem;
 }
 
 .keyboard .btn {
@@ -956,9 +960,13 @@ footer .contact {
 
 .keyboard .btn:hover {
   color: #00203F;
-  background-color: rgba(0, 32, 63, 0.8);
+  background-color: #00203F;
   color: #ADEFD1;
   outline: 5px solid transparent;
+}
+
+.padding-10 {
+  padding-top: 10rem;
 }
 
 #userid, #password {
@@ -1052,6 +1060,7 @@ footer .contact {
 /********** Welcome ***********/
 .welcome {
   color: #ADEFD1;
+  padding: 10rem 0;
 }
 
 .welcome-grid {
@@ -1062,8 +1071,8 @@ footer .contact {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: 40vh 40vh;
-      grid-template-rows: 40vh 40vh;
+  -ms-grid-rows: 30vh 30vh;
+      grid-template-rows: 30vh 30vh;
   place-items: center;
   gap: 1rem;
   margin-top: 2rem;
