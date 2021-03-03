@@ -60,102 +60,131 @@
 .hero{
     display: grid;
     width: 100%;
-    grid-template-columns: 2.16fr 1fr;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     height: 100vh;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem 1rem;
+    padding-top: 9rem;
+    background: $primary-background;
 }
-
+.triangle {
+    position: absolute;
+    border-top: 5rem solid transparent;
+    border-left: 5rem solid transparent;
+    border-right: 5rem solid transparent;
+    height: 2rem;
+    width: 2rem;
+    top: 88%;
+    left: 45%;
+    animation: arrow 5s ease-in 8s 1 normal forwards;
+}
+.hero-text {
+    position: absolute;
+    top: 20%;
+    text-align: center;
+    color: transparent;
+    width: 100%;
+    padding: 1rem 20%;
+    font-size: 5rem;
+    animation: see 1s linear 7s 1 normal forwards;
+}
 .farming {
     background: url("../media/farming.jpg");
-    &:hover .schemes {
-        display:inline-block;
-        animation: slide-left 5s linear 0s 1 normal;
-    }
 }
-
 .businessman {
-    background: url("../media/bussinessman.jpg"); 
-    background-position: right bottom;
-    left: 0%;
-    &:hover .schemes {
-        display:inline-block;
-        animation: slide-right 5s linear 0s 1 normal;
-    }
+    background: url("../media/businessman.jpg"); 
 }
-
-.farming, .businessman {
+.businesswoman {
+    background: url("../media/business-women.jpg");
+}
+.students {
+    background: url("../media/students.jpg");
+}
+.farming, .businessman, .businesswoman, .students {
     overflow: hidden;
     background-size: cover;
-    position: relative;
+    box-shadow: 1px 1px 10px 5px #000;
+    position: relative; 
 }
-.schemes {    
-    display: none;
-    text-align: right;
-    position: absolute;
-    bottom: 10%;
-
-    .scheme-item {
-        background: rgba($primary-background, 0.8);
-        border: 5px solid black;
-        border-radius: 50px;
-        border-left: 0;
-        border-right: 0;
-        margin-top: 5rem;
-        display: inline-block;
-        &:hover a {
-            color: $primary-background;
-            background: rgba($primary-color, 0.5);
-            font-weight: 700;
-            text-transform: uppercase;
-            border-radius: 50px;
-        }
-    }
-    a {
-        font-size: 1.5rem;
-        padding: 1rem;
-        color: $primary-color;
-        display: inline-block;
-    }
+.farming, .businesswoman {
+    animation: slide-right 5s ease-in 0s 1 normal forwards;
 }
-.schemes-right {
-    text-align: left;
-    position: absolute;
-}
-.scheme-left {
-    position: absolute;
-    right: 0;
-}
+.businessman, .students {
+    animation: slide-left 5s ease-in 0s 1 normal forwards;
+}     
 
 @keyframes slide-left {
     0% {
-        left: 100%;
+        width:25%;
+        right: calc(25% + 1rem);
     }
     25% {
-        left: 75%;
+        width: 100%;
+        right: calc(100% + 1rem);
     }
     50% {
-        left: 25%;
+        width: 75%;
+        right: calc(25% + 1rem);
     }
     100% {
-        left: 0%;
+        width: 100%;
+        right: 0%;
     }
 }
 
 @keyframes slide-right {
     0% {
-        right: 100%;        
+        width: 25%;    
+        left: calc(25% + 1rem);    
     }
     25% {
-        right: 75%;        
+        width: 100%;
+        left: calc(100% + 1rem);         
     }
     50% {
-        right: 25%;
-        left: 0;
+        width: 75%;
+        left: calc(25% + 1rem);    
     }
     100% {
-        right: 0%;
-        left: 0;
+        width: 100%;
+        left: 0%;   
     }
 }
+
+@keyframes see {
+    0% {
+       color: $primary-color;
+       background-color: rgba(#000, 0.7);
+       text-shadow: 1px 1px 1px #fff;
+    }
+    100% {
+        color: $primary-color;
+        background-color: rgba(#000, 0.7);
+        text-shadow: 1px 1px 1px #fff;
+     }
+
+}
+@keyframes arrow {
+    0% {
+        top: 50%; 
+        border-top: 5rem solid rgba($primary-color, 0.2);
+    }
+    25% {
+        top: 90%;  
+        border-top: 5rem solid rgba($primary-color, 0.4);      
+    }
+    50% {
+        top: 60%;    
+        border-top: 5rem solid rgba($primary-color, 0.6);
+    }
+    100% {
+        top: 75%;  
+        border-top: 5rem solid rgba($primary-color, 0.8);
+    }
+}
+
 /******************** To do **********************/
 .action {
     font-size: 1.5rem;
@@ -214,8 +243,25 @@
     
     .hero {
         grid-template-columns: 1fr;
-        grid-template-rows: 100vh 100vh;
-        height: 200vh;
+        grid-template-rows: 100vh; 
+        height: 100vh;
+        padding: 0rem;
+        margin-bottom: 0;
+        z-index: 2;
+    }
+    .farming, .businessman, .students {
+        display: none;
+    }
+    .businesswoman {
+        background-position: 20% 60%;
+        animation: none;
+        box-shadow: 0 0 0 #000;
+    }
+    .hero-text {
+        animation-delay: 1s;
+    }
+    .triangle {
+        animation-delay: 2s;
     }
 
 }
@@ -241,6 +287,9 @@
     }
     .nav-header {
         margin-top: 1rem;
+    }
+    .hero-text {
+        padding: 2rem;
     }
 }
 @media screen and (max-width:768px) {
@@ -279,5 +328,8 @@
             margin-top: 1rem;
         }
     } 
+    .hero-text {
+        font-size: 4rem;
+    }
    
 }
