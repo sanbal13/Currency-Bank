@@ -99,4 +99,14 @@ img {
     position: relative;
     z-index:2;
 }
-
+/* ************ Internet Banking ********** */
+.internet-banking {
+    position: fixed;
+    padding: 1rem;
+    background: linear-gradient(gold, orange);
+    top: 12%;
+    right: 2%;
+    border-radius: 1rem;
+    font-weight: 700;
+    color: #000;
+}
