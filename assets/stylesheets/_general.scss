@@ -21,6 +21,9 @@ img {
 .padding {
     padding: 3rem 0;
 }
+.margin {
+    margin: 10rem 0;
+}
 .container {
     max-width: 1400px;
     width: 100%;
@@ -28,6 +31,7 @@ img {
     padding: 0 2rem;
 
 }
+
 /* ********** Button ********** */
 .btn {
     padding: 1rem 2rem;
@@ -68,6 +72,9 @@ img {
 .flex-column {
     flex-direction: column;
 }
+.flex-50 {
+    flex: 0 1 50%;
+}
 /************ Headings ***********/
 @while $heading <= 6 {
     h#{$heading} {
@@ -104,9 +111,104 @@ img {
     position: fixed;
     padding: 1rem;
     background: linear-gradient(gold, orange);
-    top: 12%;
+    top: 15%;
     right: 2%;
     border-radius: 1rem;
     font-weight: 700;
     color: #000;
+}
+
+/************ Personal Business Agriculture NRI **********/
+/* *********** About *********** */
+.about-left {
+    justify-content: center;
+    padding: 2rem;
+    color: rgba($primary-color, 0.6);
+    text-shadow: 1px 1px 1px #000;
+    border: 0.25rem solid rgb(1, 1, 27);
+    box-shadow: 1px 1px 2px black;
+    p {
+        margin-top: 1rem;
+    }
+    
+}
+.about-img {
+    border-radius: 1rem;
+    margin: 0 2rem;
+    height: 80vh;
+    box-shadow: 1px 1px 5px #000;
+}
+.para-about, .para-products-services {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0.5rem 0;
+    color: $primary-color;
+}
+/*********** Products-Services ***********/
+.products-services {
+    .service-accounts {
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+    .service-insurance{
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+    padding: 8rem 0;
+    color: $primary-color;
+    h3 {
+        color: $primary-background;
+    }
+    p {
+        text-align: center;
+    }
+    img {
+        padding: 2rem;
+    }
+    .para-products-services {
+        margin-bottom: 2rem;
+    }
+    .service-para {
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 0.5rem 0;
+        color: $primary-color;
+    }
+
+}
+/********************** Media Query *********************/
+@media screen and (max-width:1200px) {
+ .about {
+     margin-top: 5rem;
+ }
+}
+@media screen and (max-width:768px) {
+    .about {
+        border: 0.5rem solid rgb(1, 1, 27);
+        flex-direction: column;
+        margin-top: 8rem;
+        padding: 2rem;
+        img {            
+            margin: 0;
+        }
+    }
+    .about-left {
+        margin-bottom: 2rem;
+        border: 0;
+        box-shadow: 1px 1px 1px transparent;
+    }
+    .products-services {
+        .service {
+            flex-direction: column;
+            img {
+                width: 100%;
+            }
+        }
+
+    }
+
+}
+ @media screen and (max-width:540px) {    
+
+   
 }

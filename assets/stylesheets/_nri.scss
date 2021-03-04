@@ -1,0 +1,44 @@
+/* ********************** NRI ******************** */
+/*********** Hero ************/
+.nri-01{
+    background: url("../media/nri/nri-01.jpg");
+} 
+.nri-02{
+    background: url("../media/nri/nri-02.jpg");
+}
+.nri-03{
+    background: url("../media/nri/nri-03.jpg");
+}
+.nri-04{
+    background: url("../media/nri/nri-04.jpg");
+    background-position: 80%;
+}
+.nri-01, .nri-02, .nri-03, .nri-04 {
+    overflow: hidden;
+    background-size: cover;
+    box-shadow: 1px 1px 10px 5px #000;
+    position: relative; 
+    transition: all;
+}
+.nri-01, .nri-03 {
+    animation: slide-right 5s ease-in 0s 1 normal forwards;
+}
+.nri-02, .nri-04 {
+    animation: slide-left 5s ease-in 0s 1 normal forwards;
+}  
+
+@media screen and (max-width:1200px) {
+.nri-02, .nri-03, .nri-04 {
+    display: none;
+}
+.nri-01 {
+    background-position: 20% 60%;
+    animation: none;
+    box-shadow: 0 0 0 #000;
+}
+.hero-text {
+    padding-left: 2px;
+    padding-right: 2px;
+    line-height: 1.3;
+}
+}

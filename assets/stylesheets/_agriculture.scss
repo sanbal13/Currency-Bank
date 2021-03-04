@@ -1,0 +1,43 @@
+/* ********************** Agriculture ******************** */
+/*********** Hero ************/
+.agriculture-01{
+    background: url("../media/agriculture/agriculture-01.jpg");
+} 
+.agriculture-02{
+    background: url("../media/agriculture/agriculture-02.jpg");
+}
+.agriculture-03{
+    background: url("../media/agriculture/agriculture-03.jpg");
+}
+.agriculture-04{
+    background: url("../media/agriculture/agriculture-04.jpg");
+    background-position: 40% 10%;
+}
+.agriculture-01, .agriculture-02, .agriculture-03, .agriculture-04 {
+    overflow: hidden;
+    background-size: cover;
+    box-shadow: 1px 1px 10px 5px #000;
+    position: relative; 
+}
+.agriculture-01, .agriculture-03 {
+    animation: slide-right 5s ease-in 0s 1 normal forwards;
+}
+.agriculture-02, .agriculture-04 {
+    animation: slide-left 5s ease-in 0s 1 normal forwards;
+}  
+
+@media screen and (max-width:1200px) {
+.agriculture-02, .agriculture-03, .agriculture-04 {
+    display: none;
+}
+.agriculture-01 {
+    background-position: 20% 60%;
+    animation: none;
+    box-shadow: 0 0 0 #000;
+}
+.hero-text {
+    padding-left: 2px;
+    padding-right: 2px;
+    line-height: 1.3;
+}
+}

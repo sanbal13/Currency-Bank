@@ -1,0 +1,44 @@
+/* ********************** Business ******************** */
+/*********** Hero ************/
+.business-01{
+    background: url("../media/business/business-01.jpg");
+} 
+.business-02{
+    background: url("../media/business/business-02.jpg");
+    background-position: 60% 10%;
+}
+.business-03{
+    background: url("../media/business/business-03.jpg");
+    background-position: 40% 10%;
+}
+.business-04{
+    background: url("../media/business/business-04.jpg");
+}
+.business-01, .business-02, .business-03, .business-04 {
+    overflow: hidden;
+    background-size: cover;
+    box-shadow: 1px 1px 10px 5px #000;
+    position: relative; 
+}
+.business-01, .business-03 {
+    animation: slide-right 5s ease-in 0s 1 normal forwards;
+}
+.business-02, .business-04 {
+    animation: slide-left 5s ease-in 0s 1 normal forwards;
+}  
+
+@media screen and (max-width:1200px) {
+.business-01, .business-02, .business-04 {
+    display: none;
+}
+.business-03 {
+    background-position: 45% 100%;
+    animation: none;
+    box-shadow: 0 0 0 #000;
+}
+.hero-text {
+    padding-left: 2px;
+    padding-right: 2px;
+    line-height: 1.3;
+}
+}

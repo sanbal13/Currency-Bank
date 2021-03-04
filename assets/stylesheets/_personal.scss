@@ -1,0 +1,42 @@
+/* ********************** Personal ******************** */
+/* ********* Hero ********** */
+.personal-01{
+    background: url("../media/personal/personal-01.jpg");
+} 
+.personal-02{
+    background: url("../media/personal/personal-02.jpg");
+}
+.personal-03{
+    background: url("../media/personal/personal-03.jpg");
+}
+.personal-04{
+    background: url("../media/personal/personal-04.jpg");
+}
+.personal-01, .personal-02, .personal-03, .personal-04 {
+    overflow: hidden;
+    background-size: cover;
+    box-shadow: 1px 1px 10px 5px #000;
+    position: relative; 
+}
+.personal-01, .personal-03 {
+    animation: slide-right 5s ease-in 0s 1 normal forwards;
+}
+.personal-02, .personal-04 {
+    animation: slide-left 5s ease-in 0s 1 normal forwards;
+}  
+
+@media screen and (max-width:1200px) {
+.personal-01, .personal-02, .personal-04 {
+    display: none;
+}
+.personal-03 {
+    background-position: 20% 60%;
+    animation: none;
+    box-shadow: 0 0 0 #000;
+}
+.hero-text {
+    padding-left: 2px;
+    padding-right: 2px;
+    line-height: 1.3;
+}
+}

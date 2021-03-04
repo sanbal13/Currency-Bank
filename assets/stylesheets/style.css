@@ -78,6 +78,10 @@ img {
   padding: 3rem 0;
 }
 
+.margin {
+  margin: 10rem 0;
+}
+
 .container {
   max-width: 1400px;
   width: 100%;
@@ -144,6 +148,12 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.flex-50 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
 }
 
 /************ Headings ***********/
@@ -216,11 +226,120 @@ h6 {
   padding: 1rem;
   background: -webkit-gradient(linear, left top, left bottom, from(gold), to(orange));
   background: linear-gradient(gold, orange);
-  top: 12%;
+  top: 15%;
   right: 2%;
   border-radius: 1rem;
   font-weight: 700;
   color: #000;
+}
+
+/************ Personal Business Agriculture NRI **********/
+/* *********** About *********** */
+.about-left {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem;
+  color: rgba(173, 239, 209, 0.6);
+  text-shadow: 1px 1px 1px #000;
+  border: 0.25rem solid #01011b;
+  -webkit-box-shadow: 1px 1px 2px black;
+          box-shadow: 1px 1px 2px black;
+}
+
+.about-left p {
+  margin-top: 1rem;
+}
+
+.about-img {
+  border-radius: 1rem;
+  margin: 0 2rem;
+  height: 80vh;
+  -webkit-box-shadow: 1px 1px 5px #000;
+          box-shadow: 1px 1px 5px #000;
+}
+
+.para-about, .para-products-services {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0.5rem 0;
+  color: #ADEFD1;
+}
+
+/*********** Products-Services ***********/
+.products-services {
+  padding: 8rem 0;
+  color: #ADEFD1;
+}
+
+.products-services .service-accounts {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.products-services .service-insurance {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.products-services h3 {
+  color: #00203F;
+}
+
+.products-services p {
+  text-align: center;
+}
+
+.products-services img {
+  padding: 2rem;
+}
+
+.products-services .para-products-services {
+  margin-bottom: 2rem;
+}
+
+.products-services .service-para {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0.5rem 0;
+  color: #ADEFD1;
+}
+
+/********************** Media Query *********************/
+@media screen and (max-width: 1200px) {
+  .about {
+    margin-top: 5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    border: 0.5rem solid #01011b;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 8rem;
+    padding: 2rem;
+  }
+  .about img {
+    margin: 0;
+  }
+  .about-left {
+    margin-bottom: 2rem;
+    border: 0;
+    -webkit-box-shadow: 1px 1px 1px transparent;
+            box-shadow: 1px 1px 1px transparent;
+  }
+  .products-services .service {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .products-services .service img {
+    width: 100%;
+  }
 }
 
 /* *********** Header ********** */
@@ -590,7 +709,8 @@ footer .contact {
   text-align: center;
   color: transparent;
   width: 100%;
-  padding: 1rem 20%;
+  padding: 1rem 5%;
+  line-height: 1.3;
   font-size: 5rem;
   -webkit-animation: see 1s linear 7s 1 normal forwards;
           animation: see 1s linear 7s 1 normal forwards;
@@ -794,7 +914,7 @@ footer .contact {
   margin: 2rem 0;
 }
 
-.serve-para, .service-para {
+.para-serve, .para-service {
   font-size: 1.2rem;
   text-align: center;
   margin: 0.5rem 0;
@@ -890,9 +1010,15 @@ footer .contact {
   .hero-text {
     padding: 2rem;
   }
+  .internet-banking {
+    top: 10rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  html {
+    font-size: 11px;
+  }
   .container-grid {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -1136,5 +1262,227 @@ footer .contact {
   width: 50%;
   height: 50%;
   position: relative;
+}
+
+/* ********************** Personal ******************** */
+/* ********* Hero ********** */
+.personal-01 {
+  background: url("../media/personal/personal-01.jpg");
+}
+
+.personal-02 {
+  background: url("../media/personal/personal-02.jpg");
+}
+
+.personal-03 {
+  background: url("../media/personal/personal-03.jpg");
+}
+
+.personal-04 {
+  background: url("../media/personal/personal-04.jpg");
+}
+
+.personal-01, .personal-02, .personal-03, .personal-04 {
+  overflow: hidden;
+  background-size: cover;
+  -webkit-box-shadow: 1px 1px 10px 5px #000;
+          box-shadow: 1px 1px 10px 5px #000;
+  position: relative;
+}
+
+.personal-01, .personal-03 {
+  -webkit-animation: slide-right 5s ease-in 0s 1 normal forwards;
+          animation: slide-right 5s ease-in 0s 1 normal forwards;
+}
+
+.personal-02, .personal-04 {
+  -webkit-animation: slide-left 5s ease-in 0s 1 normal forwards;
+          animation: slide-left 5s ease-in 0s 1 normal forwards;
+}
+
+@media screen and (max-width: 1200px) {
+  .personal-01, .personal-02, .personal-04 {
+    display: none;
+  }
+  .personal-03 {
+    background-position: 20% 60%;
+    -webkit-animation: none;
+            animation: none;
+    -webkit-box-shadow: 0 0 0 #000;
+            box-shadow: 0 0 0 #000;
+  }
+  .hero-text {
+    padding-left: 2px;
+    padding-right: 2px;
+    line-height: 1.3;
+  }
+}
+
+/* ********************** Business ******************** */
+/*********** Hero ************/
+.business-01 {
+  background: url("../media/business/business-01.jpg");
+}
+
+.business-02 {
+  background: url("../media/business/business-02.jpg");
+  background-position: 60% 10%;
+}
+
+.business-03 {
+  background: url("../media/business/business-03.jpg");
+  background-position: 40% 10%;
+}
+
+.business-04 {
+  background: url("../media/business/business-04.jpg");
+}
+
+.business-01, .business-02, .business-03, .business-04 {
+  overflow: hidden;
+  background-size: cover;
+  -webkit-box-shadow: 1px 1px 10px 5px #000;
+          box-shadow: 1px 1px 10px 5px #000;
+  position: relative;
+}
+
+.business-01, .business-03 {
+  -webkit-animation: slide-right 5s ease-in 0s 1 normal forwards;
+          animation: slide-right 5s ease-in 0s 1 normal forwards;
+}
+
+.business-02, .business-04 {
+  -webkit-animation: slide-left 5s ease-in 0s 1 normal forwards;
+          animation: slide-left 5s ease-in 0s 1 normal forwards;
+}
+
+@media screen and (max-width: 1200px) {
+  .business-01, .business-02, .business-04 {
+    display: none;
+  }
+  .business-03 {
+    background-position: 45% 100%;
+    -webkit-animation: none;
+            animation: none;
+    -webkit-box-shadow: 0 0 0 #000;
+            box-shadow: 0 0 0 #000;
+  }
+  .hero-text {
+    padding-left: 2px;
+    padding-right: 2px;
+    line-height: 1.3;
+  }
+}
+
+/* ********************** Agriculture ******************** */
+/*********** Hero ************/
+.agriculture-01 {
+  background: url("../media/agriculture/agriculture-01.jpg");
+}
+
+.agriculture-02 {
+  background: url("../media/agriculture/agriculture-02.jpg");
+}
+
+.agriculture-03 {
+  background: url("../media/agriculture/agriculture-03.jpg");
+}
+
+.agriculture-04 {
+  background: url("../media/agriculture/agriculture-04.jpg");
+  background-position: 40% 10%;
+}
+
+.agriculture-01, .agriculture-02, .agriculture-03, .agriculture-04 {
+  overflow: hidden;
+  background-size: cover;
+  -webkit-box-shadow: 1px 1px 10px 5px #000;
+          box-shadow: 1px 1px 10px 5px #000;
+  position: relative;
+}
+
+.agriculture-01, .agriculture-03 {
+  -webkit-animation: slide-right 5s ease-in 0s 1 normal forwards;
+          animation: slide-right 5s ease-in 0s 1 normal forwards;
+}
+
+.agriculture-02, .agriculture-04 {
+  -webkit-animation: slide-left 5s ease-in 0s 1 normal forwards;
+          animation: slide-left 5s ease-in 0s 1 normal forwards;
+}
+
+@media screen and (max-width: 1200px) {
+  .agriculture-02, .agriculture-03, .agriculture-04 {
+    display: none;
+  }
+  .agriculture-01 {
+    background-position: 20% 60%;
+    -webkit-animation: none;
+            animation: none;
+    -webkit-box-shadow: 0 0 0 #000;
+            box-shadow: 0 0 0 #000;
+  }
+  .hero-text {
+    padding-left: 2px;
+    padding-right: 2px;
+    line-height: 1.3;
+  }
+}
+
+/* ********************** NRI ******************** */
+/*********** Hero ************/
+.nri-01 {
+  background: url("../media/nri/nri-01.jpg");
+}
+
+.nri-02 {
+  background: url("../media/nri/nri-02.jpg");
+}
+
+.nri-03 {
+  background: url("../media/nri/nri-03.jpg");
+}
+
+.nri-04 {
+  background: url("../media/nri/nri-04.jpg");
+  background-position: 80%;
+}
+
+.nri-01, .nri-02, .nri-03, .nri-04 {
+  overflow: hidden;
+  background-size: cover;
+  -webkit-box-shadow: 1px 1px 10px 5px #000;
+          box-shadow: 1px 1px 10px 5px #000;
+  position: relative;
+  -webkit-transition: all;
+  transition: all;
+}
+
+.nri-01, .nri-03 {
+  -webkit-animation: slide-right 5s ease-in 0s 1 normal forwards;
+          animation: slide-right 5s ease-in 0s 1 normal forwards;
+}
+
+.nri-02, .nri-04 {
+  -webkit-animation: slide-left 5s ease-in 0s 1 normal forwards;
+          animation: slide-left 5s ease-in 0s 1 normal forwards;
+}
+
+@media screen and (max-width: 1200px) {
+  .nri-02, .nri-03, .nri-04 {
+    display: none;
+  }
+  .nri-01 {
+    background-position: 20% 60%;
+    -webkit-animation: none;
+            animation: none;
+    -webkit-box-shadow: 0 0 0 #000;
+            box-shadow: 0 0 0 #000;
+  }
+  .hero-text {
+    padding-left: 2px;
+    padding-right: 2px;
+    line-height: 1.3;
+  }
 }
 /*# sourceMappingURL=style.css.map */
