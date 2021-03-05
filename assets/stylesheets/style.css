@@ -128,6 +128,12 @@ img {
           align-items: center;
 }
 
+.justify-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .space-between {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -1592,5 +1598,17 @@ footer .contact {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+}
+
+/* ********** Welcome ********** */
+.main-welcome {
+  padding: 10rem 2rem;
+  background-color: rgba(173, 239, 209, 0.5);
+  color: #00203F;
+  height: 60vh;
+}
+
+.main-welcome h2 {
+  padding-top: 2rem;
 }
 /*# sourceMappingURL=style.css.map */
