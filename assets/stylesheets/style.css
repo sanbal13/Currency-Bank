@@ -707,7 +707,7 @@ footer .contact {
 
 .hero-text {
   position: absolute;
-  top: 20%;
+  top: 22%;
   text-align: center;
   color: transparent;
   width: 100%;
@@ -1195,87 +1195,6 @@ footer .contact {
   }
 }
 
-/********** Welcome ***********/
-.welcome {
-  color: #ADEFD1;
-  padding: 10rem 0;
-}
-
-.welcome-grid {
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: 30vh 30vh;
-      grid-template-rows: 30vh 30vh;
-  place-items: center;
-  gap: 1rem;
-  margin-top: 2rem;
-  position: relative;
-}
-
-.accounts, .transfer, .cheques, .other-services {
-  position: relative;
-  border: 5px solid #ADEFD1;
-  -webkit-box-shadow: 1px 1px 5px #000;
-          box-shadow: 1px 1px 5px #000;
-  padding: 1rem;
-  width: 50%;
-  height: 50%;
-}
-
-.accounts:hover, .transfer:hover, .cheques:hover, .other-services:hover {
-  border-color: rgba(173, 239, 209, 0.5);
-  -webkit-box-shadow: 1px 1px 5px 2px #000;
-          box-shadow: 1px 1px 5px 2px #000;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 2;
-  background-color: #00203F;
-}
-
-.accounts:hover .close-window, .transfer:hover .close-window, .cheques:hover .close-window, .other-services:hover .close-window {
-  display: inline-block;
-}
-
-.close-window {
-  position: absolute;
-  display: inline-block;
-  top: 2rem;
-  right: 4rem;
-  font-size: 2rem;
-  font-weight: 400;
-  padding: 0rem;
-  color: grey;
-  border: 2px solid grey;
-  line-height: 0.6;
-  vertical-align: top;
-  padding: 0 1rem;
-  padding-bottom: 0.5rem;
-  display: none;
-}
-
-.close-window:hover {
-  color: #fff;
-  border: 2px solid #fff;
-  -webkit-box-shadow: 1px 1px 1px #000;
-          box-shadow: 1px 1px 1px #000;
-}
-
-#close-cb {
-  display: none;
-}
-
-#close-cb:checked ~ div {
-  width: 50%;
-  height: 50%;
-  position: relative;
-}
-
 /* ********************** Personal ******************** */
 /* ********* Hero ********** */
 .personal-01 {
@@ -1576,5 +1495,102 @@ footer .contact {
   -webkit-box-shadow: 1px 1px 4px black;
           box-shadow: 1px 1px 4px black;
   border: 3px double rgba(173, 239, 209, 0.5);
+}
+
+/********************** Product and Services *********************/
+.products-and-services {
+  background-color: rgba(173, 239, 209, 0.7);
+  color: #00203F;
+}
+
+.products-and-services h3, .products-and-services a {
+  color: #ADEFD1;
+}
+
+.products-and-services a {
+  text-decoration: underline;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.products-and-services .link {
+  text-align: right;
+  margin-top: 1rem;
+  margin-right: 2rem;
+}
+
+.products-services-grid {
+  margin-top: 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.products-services-grid .accounts, .products-services-grid .loans, .products-services-grid .cards, .products-services-grid .insurance {
+  background-color: rgba(0, 32, 63, 0.8);
+  padding: 2rem;
+}
+
+.accounts-grid, .loans-grid, .insurance-grid, .cards-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+.accounts-grid .accounts-savings, .accounts-grid .account-current, .accounts-grid .account-salary, .accounts-grid .account-kids,
+.accounts-grid .loans-personal, .accounts-grid .loans-home, .accounts-grid .loans-vehicle, .accounts-grid .loans-education,
+.accounts-grid .insurance-life, .accounts-grid .insurance-non-life, .accounts-grid .insurance-health,
+.accounts-grid .cards-visa, .accounts-grid .cards-master, .accounts-grid .cards-text, .loans-grid .accounts-savings, .loans-grid .account-current, .loans-grid .account-salary, .loans-grid .account-kids,
+.loans-grid .loans-personal, .loans-grid .loans-home, .loans-grid .loans-vehicle, .loans-grid .loans-education,
+.loans-grid .insurance-life, .loans-grid .insurance-non-life, .loans-grid .insurance-health,
+.loans-grid .cards-visa, .loans-grid .cards-master, .loans-grid .cards-text, .insurance-grid .accounts-savings, .insurance-grid .account-current, .insurance-grid .account-salary, .insurance-grid .account-kids,
+.insurance-grid .loans-personal, .insurance-grid .loans-home, .insurance-grid .loans-vehicle, .insurance-grid .loans-education,
+.insurance-grid .insurance-life, .insurance-grid .insurance-non-life, .insurance-grid .insurance-health,
+.insurance-grid .cards-visa, .insurance-grid .cards-master, .insurance-grid .cards-text, .cards-grid .accounts-savings, .cards-grid .account-current, .cards-grid .account-salary, .cards-grid .account-kids,
+.cards-grid .loans-personal, .cards-grid .loans-home, .cards-grid .loans-vehicle, .cards-grid .loans-education,
+.cards-grid .insurance-life, .cards-grid .insurance-non-life, .cards-grid .insurance-health,
+.cards-grid .cards-visa, .cards-grid .cards-master, .cards-grid .cards-text {
+  background-color: rgba(173, 239, 209, 0.9);
+  padding: 2rem;
+}
+
+.accounts-grid .cards-text, .loans-grid .cards-text, .insurance-grid .cards-text, .cards-grid .cards-text {
+  text-align: center;
+}
+
+.accounts-grid .cards-text a, .loans-grid .cards-text a, .insurance-grid .cards-text a, .cards-grid .cards-text a {
+  text-align: center;
+}
+
+.accounts-grid .accounts-icon, .accounts-grid .loans-icon, .accounts-grid .insurance-icon, .accounts-grid .cards-icon, .loans-grid .accounts-icon, .loans-grid .loans-icon, .loans-grid .insurance-icon, .loans-grid .cards-icon, .insurance-grid .accounts-icon, .insurance-grid .loans-icon, .insurance-grid .insurance-icon, .insurance-grid .cards-icon, .cards-grid .accounts-icon, .cards-grid .loans-icon, .cards-grid .insurance-icon, .cards-grid .cards-icon {
+  font-size: 4rem;
+  margin-top: 1rem;
+}
+
+.insurance-grid {
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cards-grid {
+  -ms-grid-columns: 1fr 1fr 2fr;
+      grid-template-columns: 1fr 1fr 2fr;
+}
+
+.cards-grid a {
+  color: #00203F;
+}
+
+/* ********* Media Queries ********** */
+@media screen and (max-width: 756px) {
+  .accounts-grid, .loans-grid, .insurance-grid, .cards-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 /*# sourceMappingURL=style.css.map */

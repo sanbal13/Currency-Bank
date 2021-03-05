@@ -1,0 +1,70 @@
+/********************** Product and Services *********************/
+.products-and-services {
+    background-color: rgba($primary-color, 0.7);
+    color: $primary-background;  
+    h3, a {
+        color: $primary-color;
+    }
+    a {
+        text-decoration: underline;
+        font-weight: 700;
+        font-size: 1.2rem;        
+    }
+    .link {
+        text-align: right;
+        margin-top: 1rem;
+        margin-right: 2rem;
+    }
+}
+.products-services-grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    .accounts, .loans, .cards, .insurance {
+        background-color: rgba($primary-background, 0.8);
+        padding: 2rem;
+    }    
+}
+.accounts-grid, .loans-grid, .insurance-grid, .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 2rem 1rem 1rem 1rem;
+    .accounts-savings, .account-current, .account-salary, .account-kids,
+    .loans-personal, .loans-home, .loans-vehicle, .loans-education, 
+    .insurance-life, .insurance-non-life, .insurance-health,
+    .cards-visa, .cards-master, .cards-text {
+        background-color: rgba($primary-color, 0.9);
+        padding: 2rem;
+    }
+
+   .cards-text {
+       text-align: center;
+       a {
+           text-align: center;
+       }
+   }
+
+    .accounts-icon, .loans-icon, .insurance-icon, .cards-icon {
+        font-size: 4rem;
+        margin-top: 1rem;
+    }
+}
+.insurance-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.cards-grid {
+    grid-template-columns: 1fr 1fr 2fr;
+    a {
+        color: $primary-background;
+    }
+}
+/* ********* Media Queries ********** */
+@media screen and (max-width: 756px) {
+
+    .accounts-grid, .loans-grid, .insurance-grid, .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
