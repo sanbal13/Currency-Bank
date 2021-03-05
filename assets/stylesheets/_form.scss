@@ -1,0 +1,70 @@
+/*********************** Form ***********************/
+.form {
+    max-width: 500px; 
+    width: 100%;  
+    color: rgba($primary-color, 0.8);
+    padding: 2rem;
+    background: rgba($primary-color, 0.2);
+    margin: 0 auto;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+    display: block;
+    h3 {
+        font-size: 3rem
+    }
+    label, input, textarea {
+        display: block;
+        width: 100%;
+    }
+    textarea {
+        height: 10rem;
+    }
+    label {
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    input, textarea{
+        padding: 0.5rem;
+        border-radius: 0.3rem;
+        outline: none;
+        border: none;
+        background: rgba($primary-color, 0.5);
+        color: rgba($primary-background, 0.8);
+        font-size: 1.2rem;
+        &:focus {
+            background: rgba($primary-color, 0.8);
+        }
+    }
+    
+    button {
+        padding: 0.5rem 2rem;
+        margin-top: 2rem;
+        border-radius: 0.5rem;
+        border: none;
+        outline: none;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color:rgba($primary-color, 0.8);
+        background-color:rgba($primary-background, 0.8);
+        border: 3px double rgba($primary-background, 0.8);
+        box-shadow: 1px 1px 2px #000;
+        &:hover {
+            color:rgba($primary-background, 0.8);
+            background-color:rgba($primary-color, 1);            
+        }
+    }
+}   
+.form-main {
+    padding: 10rem 2rem;
+}
+
+/************* Acknowledgement ************/
+.acknowledgement {
+    color: $primary-color;
+    background-color: rgba($primary-color, 0.1);
+    padding: 2rem;
+    box-shadow: 1px 1px 4px black;
+    border: 3px double rgba($primary-color, 0.5);
+}

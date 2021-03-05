@@ -193,15 +193,28 @@
 .action {
     font-size: 1.5rem;
     padding: 2rem;
-    border: 5px solid $primary-color;
+    padding: 1.3rem 2rem;
+    border:7px double rgba($primary-background, 0.6);
     margin-top: 1rem;
+    border-radius: 1rem;
+    //box-shadow: 1px 1px 5px 2px $primary-background;
+    
+
+    .action-btn {
+        background: rgba(#000, 0);
+    }
     &:hover {
-        box-shadow: 1px 1px 10px 5px $primary-background;
+        box-shadow: 1px 1px 5px 2px rgba($primary-background, 0.4);
         padding: 1.3rem 2rem;
+        .action-btn {
+            background-color: rgba($primary-background, 0.4);
+        }
+
+        .action-btn:hover {
+            background-color: rgba($primary-color, 0.4);
+        }
     }
-    &:hover .action-btn{
-        display: inline-block;
-    }
+
 }
 /*********** We Serve ***********/
 .serve i {

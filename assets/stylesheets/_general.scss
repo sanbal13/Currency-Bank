@@ -48,10 +48,6 @@ img {
         box-shadow: 1px 1px 2px $primary-background;
     }
 }
-.action-btn {
-    display: none;
-}
-
 
 /*********** Flex ***********/
 .flex {
@@ -116,6 +112,10 @@ img {
     border-radius: 1rem;
     font-weight: 700;
     color: #000;
+    &:hover {
+        color: rgb(2, 66, 2);
+        box-shadow: 1px 1px 5px black;
+    }
 }
 
 /************ Personal Business Agriculture NRI **********/

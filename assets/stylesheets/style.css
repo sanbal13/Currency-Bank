@@ -109,10 +109,6 @@ img {
           box-shadow: 1px 1px 2px #00203F;
 }
 
-.action-btn {
-  display: none;
-}
-
 /*********** Flex ***********/
 .flex {
   display: -webkit-box;
@@ -231,6 +227,12 @@ h6 {
   border-radius: 1rem;
   font-weight: 700;
   color: #000;
+}
+
+.internet-banking:hover {
+  color: #024202;
+  -webkit-box-shadow: 1px 1px 5px black;
+          box-shadow: 1px 1px 5px black;
 }
 
 /************ Personal Business Agriculture NRI **********/
@@ -894,18 +896,28 @@ footer .contact {
 .action {
   font-size: 1.5rem;
   padding: 2rem;
-  border: 5px solid #ADEFD1;
+  padding: 1.3rem 2rem;
+  border: 7px double rgba(0, 32, 63, 0.6);
   margin-top: 1rem;
+  border-radius: 1rem;
+}
+
+.action .action-btn {
+  background: rgba(0, 0, 0, 0);
 }
 
 .action:hover {
-  -webkit-box-shadow: 1px 1px 10px 5px #00203F;
-          box-shadow: 1px 1px 10px 5px #00203F;
+  -webkit-box-shadow: 1px 1px 5px 2px rgba(0, 32, 63, 0.4);
+          box-shadow: 1px 1px 5px 2px rgba(0, 32, 63, 0.4);
   padding: 1.3rem 2rem;
 }
 
 .action:hover .action-btn {
-  display: inline-block;
+  background-color: rgba(0, 32, 63, 0.4);
+}
+
+.action:hover .action-btn:hover {
+  background-color: rgba(173, 239, 209, 0.4);
 }
 
 /*********** We Serve ***********/
@@ -1484,5 +1496,85 @@ footer .contact {
     padding-right: 2px;
     line-height: 1.3;
   }
+}
+
+/*********************** Form ***********************/
+.form {
+  max-width: 500px;
+  width: 100%;
+  color: rgba(173, 239, 209, 0.8);
+  padding: 2rem;
+  background: rgba(173, 239, 209, 0.2);
+  margin: 0 auto;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  display: block;
+}
+
+.form h3 {
+  font-size: 3rem;
+}
+
+.form label, .form input, .form textarea {
+  display: block;
+  width: 100%;
+}
+
+.form textarea {
+  height: 10rem;
+}
+
+.form label {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.form input, .form textarea {
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+  background: rgba(173, 239, 209, 0.5);
+  color: rgba(0, 32, 63, 0.8);
+  font-size: 1.2rem;
+}
+
+.form input:focus, .form textarea:focus {
+  background: rgba(173, 239, 209, 0.8);
+}
+
+.form button {
+  padding: 0.5rem 2rem;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(173, 239, 209, 0.8);
+  background-color: rgba(0, 32, 63, 0.8);
+  border: 3px double rgba(0, 32, 63, 0.8);
+  -webkit-box-shadow: 1px 1px 2px #000;
+          box-shadow: 1px 1px 2px #000;
+}
+
+.form button:hover {
+  color: rgba(0, 32, 63, 0.8);
+  background-color: #adefd1;
+}
+
+.form-main {
+  padding: 10rem 2rem;
+}
+
+/************* Acknowledgement ************/
+.acknowledgement {
+  color: #ADEFD1;
+  background-color: rgba(173, 239, 209, 0.1);
+  padding: 2rem;
+  -webkit-box-shadow: 1px 1px 4px black;
+          box-shadow: 1px 1px 4px black;
+  border: 3px double rgba(173, 239, 209, 0.5);
 }
 /*# sourceMappingURL=style.css.map */
