@@ -38,11 +38,9 @@ header {
         color: $primary-color;
         font-size: 1.2rem;
         text-transform: uppercase;
-        &:hover {
-            color: $secondary-color;
-        }
     }
 }
+
 .fa-bars, .fa-times-circle {
     color: $primary-color;
     font-size: 2rem;

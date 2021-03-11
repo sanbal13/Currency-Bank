@@ -397,14 +397,18 @@ header {
   margin-left: 4rem;
 }
 
-.navigation li a {
+.btn {
   color: #ADEFD1;
   font-size: 1.2rem;
   text-transform: uppercase;
 }
+.active {
+  background-color: whitesmoke;
+  color: #00203F;
+}
 
 .navigation li a:hover {
-  color: #bbb7b7;
+  color: #504747;
 }
 
 .fa-bars, .fa-times-circle {
